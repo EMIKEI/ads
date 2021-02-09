@@ -1,0 +1,55 @@
+body {
+  overflow: hidden;
+  margin: 0 20%;
+  height: 100vh;
+  background-image: linear-gradient(to top, black, #525252);
+}
+.mouseoverZone {
+  width: 50px;
+  height: 500px;
+  position: fixed;
+  display: inline-block;
+}
+.adZone {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(7, 25vw);
+  height: 85vh;
+  margin-top: 20px;
+  background-color: #ffffff00;
+}
+.adZone::-webkit-scrollbar {
+  display: none;
+}
+.adMother {
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  background-color: #e0e0e0;
+  border: 2px solid black;
+  margin: 0 auto;
+  text-align: center;
+}
+.adMother:nth-child(odd) {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 80%;
+  height: 100%;
+  margin-top: 62.5%;
+}
+.adMother:nth-child(4) {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .adZone {
+    grid-template-columns: 25vw repeat(5, 50vw) 25vw;
+  }
+  .mouseoverZone {
+    display: none;
+  }
+}
