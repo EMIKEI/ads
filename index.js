@@ -8,7 +8,7 @@ var gooverTime2=null;
 
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
-    adZone.scrollTo(goWidth,0)
+    adZone.scrollTo(goWidth*0.975,0)
 })
 
 mouseoverZone[0].addEventListener('mouseover', function(){
@@ -25,7 +25,7 @@ mouseoverZone[0].addEventListener('mouseover', function(){
             left: -goWidth/2,
             behavior:"smooth"
         })
-    },400)
+    },375)
 })
 mouseoverZone[0].addEventListener('mouseout',function(){
     clearInterval(gooverTime1)
@@ -44,7 +44,7 @@ mouseoverZone[1].addEventListener('mouseenter', function(){
             left: goWidth/2,
             behavior:"smooth"
         })
-    },400)
+    },375)
 })
 mouseoverZone[1].addEventListener('mouseout',function(){
     clearInterval(gooverTime2)
