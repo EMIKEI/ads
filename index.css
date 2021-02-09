@@ -64,7 +64,7 @@ body {
 .adMother:nth-child(4) {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  box-shadow: 0 0 45px 10px #505050;
+  box-shadow: 0 0 40px 10px #505050;
 }
 .adMother:nth-child(4) div {
   background-image: url(img/ad.png);
@@ -80,6 +80,9 @@ body {
 }
 .adMother:nth-child(5) {
   background-color: #e0e0e0;
+  width: 75%;
+  height: 80%;
+  margin-top: 15vh;
 }
 
 .adMother:nth-child(6) {
