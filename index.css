@@ -81,7 +81,7 @@ body {
 
 .adMother:nth-child(3) {
   width: 80%;
-  height: 70%;
+  height: 65%;
   margin-top: 25vh;
 }
 .adMother:nth-child(4) {
@@ -104,7 +104,7 @@ body {
 .adMother:nth-child(5) {
   background-color: #e0e0e0;
   width: 75%;
-  /* height: 80%; */
+  height: 80%;
   margin-top: 15vh;
 }
 
@@ -117,7 +117,7 @@ body {
   }
   .adZone {
     grid-template-columns: 25vw repeat(5, 50vw) 25vw;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
   }
   .mouseoverZone {
@@ -125,9 +125,5 @@ body {
   }
   .main {
     display: block;
-  }
-  .fixedAD {
-    margin: 0;
-    width: 100%;
   }
 }
