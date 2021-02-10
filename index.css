@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "Noto Sans KR Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff)
+      format("woff"),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf)
+      format("opentype");
+}
+html {
+  overflow: hidden;
+}
 body {
   overflow: hidden;
-  margin: 0 20%;
+  margin: 0;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 5fr 60px;
   background-color: #555555;
   transition: 0.25s;
   background-image: url(img/particle.jpg);
@@ -9,21 +25,36 @@ body {
   background-position: center;
   background-blend-mode: multiply;
 }
+.searchZone {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+.searchBar {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+}
+.main {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  overflow: hidden;
+}
 .mouseoverZone {
-  width: 50px;
+  width: 100%;
   height: 500px;
-  position: fixed;
+  position: relative;
   display: inline-block;
   filter: opacity(85%);
 }
 .mouseoverZone:nth-child(1) {
+  margin-top: 10vh;
   background-image: url(img/goLeft.png);
   background-size: 45px;
   background-position: center;
   background-repeat: no-repeat;
 }
 .mouseoverZone:nth-child(3) {
-  top: 0;
   margin-top: 10vh;
   background-image: url(img/goRight.png);
   background-size: 45px;
@@ -36,8 +67,10 @@ body {
   overflow-x: scroll;
   display: grid;
   grid-template-columns: repeat(7, 25vw);
-  height: 80vh;
-  margin-top: 10vh;
+  /* height: 80vh; */
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff00;
 }
 .adZone::-webkit-scrollbar {
@@ -81,12 +114,23 @@ body {
 .adMother:nth-child(5) {
   background-color: #e0e0e0;
   width: 75%;
-  height: 80%;
+  /* height: 80%; */
   margin-top: 15vh;
 }
 
 .adMother:nth-child(6) {
   background-color: #e0e0e0;
+}
+.fixedAD {
+  background-color: #464646;
+  margin: 0 auto;
+  width: 80vw;
+  color: #f7f7f7;
+  text-align: right;
+  text-shadow: 0px 0px 20px #ffffff;
+  font-family: "Noto Sans KR Light";
+  font-size: 12px;
+  padding-right: 10px;
 }
 @media (max-width: 700px) {
   body {
@@ -94,10 +138,17 @@ body {
   }
   .adZone {
     grid-template-columns: 25vw repeat(5, 50vw) 25vw;
-    height: 70vh;
-    margin-top: 15vh;
+    height: 100vh;
+    width: 100%;
   }
   .mouseoverZone {
     display: none;
+  }
+  .main {
+    display: block;
+  }
+  .fixedAD {
+    margin: 0;
+    width: 100%;
   }
 }
