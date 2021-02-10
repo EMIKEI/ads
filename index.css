@@ -25,16 +25,6 @@ body {
   background-position: center;
   background-blend-mode: multiply;
 }
-.searchZone {
-  text-align: center;
-  color: white;
-  margin: 0;
-}
-.searchBar {
-  outline: none;
-  border: none;
-  padding: 5px 10px;
-}
 .main {
   display: grid;
   grid-template-columns: 60px 1fr 60px;
@@ -120,17 +110,6 @@ body {
 
 .adMother:nth-child(6) {
   background-color: #e0e0e0;
-}
-.fixedAD {
-  background-color: #464646;
-  margin: 0 auto;
-  width: 80vw;
-  color: #f7f7f7;
-  text-align: right;
-  text-shadow: 0px 0px 20px #ffffff;
-  font-family: "Noto Sans KR Light";
-  font-size: 12px;
-  padding-right: 10px;
 }
 @media (max-width: 700px) {
   body {
