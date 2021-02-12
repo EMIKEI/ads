@@ -6,9 +6,15 @@ var overTime = 1;
 var gooverTime1= null; 
 var gooverTime2=null;
 
+adZone.style.display = 'none';
+// 로딩 화면에서 display = 'none'
+
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
+
+    adZone.style.display = 'grid';
     adZone.scrollTo(goWidth*0.975,0)
+    
 })
 
 mouseoverZone[0].addEventListener('mouseover', function(){
