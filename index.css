@@ -17,12 +17,12 @@ body {
   margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 5fr 60px;
-  background-color: #555555;
+  grid-template-rows: 1fr 10fr;
+  background-color: #4b4b4b;
   transition: 0.25s;
-  background-image: url(img/particle.jpg);
+  background-image: linear-gradient(to top, #252525, #878a91), url(img/sky.jpg);
   background-size: 100%;
-  background-position: center;
+  background-position: top;
   background-blend-mode: multiply;
 }
 .main {
@@ -57,7 +57,7 @@ body {
   overflow-x: scroll;
   display: grid;
   grid-template-columns: repeat(7, 25vw);
-  /* height: 80vh; */
+  height: 80vh;
   width: 60vw;
   margin-left: auto;
   margin-right: auto;
@@ -74,20 +74,24 @@ body {
   background-color: #e0e0e0;
   margin: 0 auto;
   text-align: center;
+  vertical-align: bottom;
+  border-left: 5px solid #cccccc;
+  border-right: 5px solid #cccccc;
+  border-radius: 2px;
 }
 .adMother:nth-child(2) {
   background-color: #e0e0e0;
 }
 
 .adMother:nth-child(3) {
-  width: 80%;
-  height: 65%;
-  margin-top: 25vh;
+  width: 75%;
+  height: 70%;
+  margin-top: auto;
 }
 .adMother:nth-child(4) {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  box-shadow: 0 0 40px 10px #505050;
+  box-shadow: 0 0 30px 7.5px #505050;
 }
 .adMother:nth-child(4) div {
   background-image: url(img/ad.png);
@@ -105,7 +109,7 @@ body {
   background-color: #e0e0e0;
   width: 75%;
   height: 80%;
-  margin-top: 15vh;
+  margin-top: auto;
 }
 
 .adMother:nth-child(6) {
@@ -117,7 +121,6 @@ body {
   }
   .adZone {
     grid-template-columns: 25vw repeat(5, 50vw) 25vw;
-    height: 70vh;
     width: 100%;
   }
   .mouseoverZone {
