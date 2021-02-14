@@ -25,6 +25,27 @@ body {
   background-position: top;
   background-blend-mode: multiply;
 }
+.loadingPage {
+  position: absolute;
+  background-color: #252525;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+}
+.loadingPage p {
+  text-align: center;
+  color: #f2f2f2;
+  font-family: "Noto Sans KR Light";
+  margin-top: 20px;
+}
+.loadingPageImg {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: auto;
+  margin-top: 40vh;
+  transition: 3s;
+}
 .main {
   display: grid;
   grid-template-columns: 60px 1fr 60px;

@@ -1,18 +1,22 @@
 var mouseoverZone = document.querySelectorAll('.mouseoverZone')
 var adZone = document.querySelector('.adZone')
+var loadingPage = document.querySelector('.loadingPage')
+var loadingPageImg = document.querySelector('.loadingPageImg')
 var goWidth = adZone.offsetWidth;
 var overTime = 1;
 
 var gooverTime1= null; 
 var gooverTime2=null;
 
-adZone.style.display = 'none';
-// 로딩 화면에서 display = 'none'
+loadingPage.style.display = 'block';
+loadingPageImg.style.transform ='rotate(1200deg)'
 
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
 
-    adZone.style.display = 'grid';
+    setTimeout(function(){
+      loadingPage.style.display = 'none';
+    },2000)
     adZone.scrollTo(goWidth*0.975,0)
     
 })
