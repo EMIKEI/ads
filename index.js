@@ -16,7 +16,7 @@ window.addEventListener('load', function(){
 
     setTimeout(function(){
       loadingPage.style.display = 'none';
-    },2000)
+    },3000)
     adZone.scrollTo(goWidth*0.975,0)
     
 })

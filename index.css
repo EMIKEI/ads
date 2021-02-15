@@ -41,10 +41,10 @@ body {
 .loadingPageImg {
   display: block;
   margin: auto;
-  width: 100px;
+  width: 85px;
   height: auto;
   margin-top: 40vh;
-  transition: 3s;
+  transition: transform 3s ease;
 }
 .main {
   display: grid;
