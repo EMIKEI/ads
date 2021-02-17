@@ -20,7 +20,8 @@ body {
   grid-template-rows: 1fr 10fr;
   background-color: #4b4b4b;
   transition: 0.25s;
-  background-image: linear-gradient(to top, #252525, #878a91), url(img/sky.jpg);
+  background-image: linear-gradient(to top, #252525, #878a91),
+    url(img/particle.jpg);
   background-size: 100%;
   background-position: top;
   background-blend-mode: multiply;
@@ -89,19 +90,36 @@ body {
 }
 
 .adMother {
-  width: 70%;
+  width: 60%;
   height: 100%;
   display: inline-block;
-  background-color: #e0e0e0;
+  background-color: #595959;
   margin: 0 auto;
   text-align: center;
   vertical-align: bottom;
-  border-left: 5px solid #cccccc;
-  border-right: 5px solid #cccccc;
+  border-left: 5px solid #646464;
+  border-right: 5px solid #646464;
   border-radius: 2px;
 }
+
+.adMother div {
+  background-color: #f2f2f2;
+  display: block;
+  cursor: pointer;
+  margin: auto 0;
+  height: 95%;
+  border-radius: 2.5px;
+
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.adMother div:hover {
+  filter: brightness(102.5%);
+}
+
 .adMother:nth-child(2) {
-  background-color: #e0e0e0;
 }
 
 .adMother:nth-child(3) {
@@ -114,27 +132,14 @@ body {
   grid-template-rows: repeat(3, 1fr);
   box-shadow: 0 0 30px 7.5px #505050;
 }
-.adMother:nth-child(4) div {
-  background-image: url(img/ad.png);
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: 0.1s;
-  cursor: pointer;
-}
-.adMother:nth-child(4) div:hover {
-  background-size: 52%;
-  filter: brightness(107.5%);
-}
+
 .adMother:nth-child(5) {
-  background-color: #e0e0e0;
   width: 75%;
   height: 80%;
   margin-top: auto;
 }
 
 .adMother:nth-child(6) {
-  background-color: #e0e0e0;
 }
 @media (max-width: 700px) {
   body {

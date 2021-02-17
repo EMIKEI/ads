@@ -3,16 +3,15 @@ var adZone = document.querySelector('.adZone')
 var loadingPage = document.querySelector('.loadingPage')
 var loadingPageImg = document.querySelector('.loadingPageImg')
 var goWidth = adZone.offsetWidth;
-var overTime = 1;
 
 var gooverTime1= null; 
 var gooverTime2=null;
 
-loadingPage.style.display = 'block';
-loadingPageImg.style.transform ='rotate(1200deg)'
-
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
+
+    loadingPage.style.display = 'block';
+    loadingPageImg.style.transform ='rotate(1440deg)';
 
     setTimeout(function(){
       loadingPage.style.display = 'none';
