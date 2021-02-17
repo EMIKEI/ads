@@ -7,11 +7,11 @@ var goWidth = adZone.offsetWidth;
 var gooverTime1= null; 
 var gooverTime2=null;
 
+loadingPage.style.display = 'block';
+loadingPageImg.style.transform ='rotate(1440deg)';
+
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
-
-    loadingPage.style.display = 'block';
-    loadingPageImg.style.transform ='rotate(1440deg)';
 
     setTimeout(function(){
       loadingPage.style.display = 'none';
