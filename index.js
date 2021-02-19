@@ -1,14 +1,19 @@
-var mouseoverZone = document.querySelectorAll('.mouseoverZone')
-var adZone = document.querySelector('.adZone')
-var loadingPage = document.querySelector('.loadingPage')
-var loadingPageImg = document.querySelector('.loadingPageImg')
-var goWidth = adZone.offsetWidth;
+const mouseoverZone = document.querySelectorAll('.mouseoverZone');
+const adZone = document.querySelector('.adZone');
+const loadingPage = document.querySelector('.loadingPage');
+const loadingPageImg = document.querySelector('.loadingPageImg');
+const alertBoxZone = document.querySelector('.alertBoxZone')
+const alertBut = document.querySelector('.alertBut')
 
-var gooverTime1= null; 
-var gooverTime2=null;
+const goWidth = adZone.offsetWidth;
+
+let gooverTime1= null; 
+let gooverTime2=null;
 
 loadingPage.style.display = 'block';
 loadingPageImg.style.transform ='rotate(1440deg)';
+
+alertBoxZone.style.display = 'none';
 
 window.addEventListener('load', function(){
     console.log('광고 플랫폼 테스트')
@@ -18,6 +23,10 @@ window.addEventListener('load', function(){
     },3000)
     adZone.scrollTo(goWidth*0.975,0)
     
+})
+
+alertBut.addEventListener('click', function(){
+    alertBoxZone.style.display='none';
 })
 
 mouseoverZone[0].addEventListener('mouseover', function(){
@@ -58,3 +67,7 @@ mouseoverZone[1].addEventListener('mouseenter', function(){
 mouseoverZone[1].addEventListener('mouseout',function(){
     clearInterval(gooverTime2)
 })
+
+function adChildClick(){
+    alertBoxZone.style.display = 'flex';
+}

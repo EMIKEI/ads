@@ -26,6 +26,7 @@ body {
   background-position: top;
   background-blend-mode: multiply;
 }
+
 .loadingPage {
   position: absolute;
   background-color: #252525;
@@ -47,6 +48,37 @@ body {
   margin-top: 40vh;
   transition: transform 3s ease;
 }
+
+.alertBoxZone {
+  background-color: #000000cb;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 990;
+}
+.alertBox {
+  background-color: #f2f2f2;
+  width: 200px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-family: "Noto Sans KR Light";
+  box-shadow: 0 0 10px #e0e0e0;
+}
+.alertBut {
+  float: right;
+  border: 0;
+  outline: 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Noto Sans KR Light";
+  background-color: #383838;
+  color: #f2f2f2;
+}
+
 .main {
   display: grid;
   grid-template-columns: 60px 1fr 60px;
@@ -110,7 +142,7 @@ body {
   height: 95%;
   border-radius: 2.5px;
 
-  background-size: 50%;
+  background-size: 55%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -124,8 +156,14 @@ body {
 
 .adMother:nth-child(3) {
   width: 75%;
-  height: 70%;
+  height: 60%;
   margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+.adMother:nth-child(3) div {
+  margin: auto;
+  width: 100%;
 }
 .adMother:nth-child(4) {
   display: grid;

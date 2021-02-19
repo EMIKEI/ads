@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>광고 플랫폼</title>
+    <title>광고 공간</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
@@ -13,7 +12,14 @@
         <img class="loadingPageImg" src="img/logo.png" alt="loading">
         <p>Loading</p>
     </div>
-    
+
+    <div class="alertBoxZone"><!--alert창-->
+        <div class="alertBox">
+            <p>You can't go there</p>
+            <button class="alertBut">OK</button>
+        </div>
+    </div>
+
     <div class="searchZone"></div>
     <div class="main">
         <div class="mouseoverZone" style="left: 0;"></div>
@@ -22,14 +28,16 @@
             <section></section>
             <section class="adMother">sample</section>
 
-            <section class="adMother">sample</section>
+            <section class="adMother">
+                <div style="background-image: url(https://1000logos.net/wp-content/uploads/2016/10/Burger-King_Logo.png);" onclick="adChildClick()"></div>
+            </section>
 
             <section class="adMother">
-                <div class="adChild3" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png);">
+                <div style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png);" onclick="adChildClick()">
                 </div>
-                <div class="adChild3" style="background-image: url(img/ad.png);">
+                <div style="background-image: url(img/ad.png);" onclick="adChildClick()">
                 </div>
-                <div class="adChild3" style="background-image: url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);">
+                <div style="background-image: url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);" onclick="adChildClick()">
                 </div>
             </section>
 
