@@ -2,6 +2,7 @@ const mouseoverZone = document.querySelectorAll('.mouseoverZone');
 const adZone = document.querySelector('.adZone');
 const loadingPage = document.querySelector('.loadingPage');
 const loadingPageImg = document.querySelector('.loadingPageImg');
+const adClick = document.querySelectorAll('.adMother div')
 const alertBoxZone = document.querySelector('.alertBoxZone')
 const alertBut = document.querySelector('.alertBut')
 
@@ -25,9 +26,18 @@ window.addEventListener('load', function(){
     
 })
 
-alertBut.addEventListener('click', function(){
-    alertBoxZone.style.display='none';
-})
+let i = 0;
+
+while(i < adClick.length){
+    adClick[i].addEventListener('click', function(){
+        alertBoxZone.style.display = 'flex';
+        
+        alertBut.addEventListener('click', function(){
+            alertBoxZone.style.display='none';
+        })
+    })
+    i++;
+}
 
 mouseoverZone[0].addEventListener('mouseover', function(){
     console.log('mouseover1')
@@ -67,7 +77,3 @@ mouseoverZone[1].addEventListener('mouseenter', function(){
 mouseoverZone[1].addEventListener('mouseout',function(){
     clearInterval(gooverTime2)
 })
-
-function adChildClick(){
-    alertBoxZone.style.display = 'flex';
-}
